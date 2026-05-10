@@ -16,9 +16,15 @@
 #     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
 #     artifact-name: corne_left_with_logging
 #
+# - board: nice_nano//zmk
+#   shield: goblit_dongle dongle_display
+#   snippet: studio-rpc-usb-uart
+#   artifact-name: goblit_dongle
 ---
 include:
   - board: nice_nano//zmk
     shield: goblit_left
   - board: nice_nano//zmk
     shield: goblit_right
+  - board: nice_nano//zmk
+    shield: settings_reset
