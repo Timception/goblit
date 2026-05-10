@@ -10,7 +10,18 @@
     col-offset = <5>;
 };
 
-&kscan0 {
+/ {
+	chosen {
+		// Define the default key scanning matrix
+		zmk,kscan = &kscan0;
+	};
+
+    // Keyboard matrix definition
+	kscan0: kscan {
+		compatible = "zmk,kscan-gpio-matrix";		
+		diode-direction = "col2row";       // Current flows from column → row
+		wakeup-source;
+
     col-gpios
         = <&pro_micro 15 GPIO_ACTIVE_HIGH>
         , <&pro_micro 18 GPIO_ACTIVE_HIGH>
@@ -25,4 +36,5 @@
             , <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
+    };
 };
