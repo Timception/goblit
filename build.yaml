@@ -26,7 +26,7 @@ include:
     shield: goblit_right    
     artifact-name: goblit_right
   - board: nice_nano//zmk
-    shield: goblit_dongle goblit_display
+    shield: goblit_dongle dongle_display
     snippet: studio-rpc-usb-uart
     artifact-name: goblit_dongle
   - board: nice_nano//zmk
