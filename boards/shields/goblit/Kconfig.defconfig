@@ -20,7 +20,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 endif
 
 
-if SHIELD_DRIFT_RIGHT
+if SHIELD_GOBLIT_RIGHT
 
 config SPI
     default y
