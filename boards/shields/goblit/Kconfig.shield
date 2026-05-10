@@ -7,5 +7,5 @@ config SHIELD_GOBLIT_LEFT
 config SHIELD_GOBLIT_RIGHT
     def_bool $(shields_list_contains,goblit_right)
 
-#config SHIELD_DRIFT_DONGLE
-#	def_bool $(shields_list_contains,drift_dongle)
+config SHIELD_GOBLIT_DONGLE
+	def_bool $(shields_list_contains,goblit_dongle)

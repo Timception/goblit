@@ -1,0 +1,51 @@
+// Copyright (c) 2025 The ZMK Contributors
+// SPDX-License-Identifier: MIT
+
+#include "goblit.dtsi"
+#include "device_input.dtsi"
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+#include <dt-bindings/zmk/matrix_transform.h>
+//#include <behaviors/input_gestures_accel.dtsi>
+
+&default_transform {
+    col-offset = <5>;
+};
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+		zmk,physical-layout = &goblit_5col_layout;
+		zephyr,display = &oled;
+    };
+		
+    mock_kscan: kscan_1 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};
+
+
+&pro_micro_i2c {
+    status = "okay";
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <64>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <63>;
+		
+		// Responsible for oled invert
+        //segment-remap;
+        //com-invdir;
+
+        //com-sequential;
+        inversion-on;
+        prechargep = <0x22>;
+    };
+};
