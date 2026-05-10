@@ -5,6 +5,7 @@
 # pass flags to the build command and `artifact-name` to assign a name to
 # distinguish build outputs from each other:
 #
+#
 # board: [ "nice_nano_v2" ]
 # shield: [ "corne_left", "corne_right" ]
 # include:
@@ -16,17 +17,16 @@
 #     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
 #     artifact-name: corne_left_with_logging
 #
-
 ---
-include:
+include:  
   - board: nice_nano//zmk
     shield: goblit_left
     artifact-name: goblit_left
   - board: nice_nano//zmk
-    shield: goblit_right
-    artifact-name: goblit_left
+    shield: goblit_right    
+    artifact-name: goblit_right
   - board: nice_nano//zmk
-    shield: goblit_dongle dongle_display
+    shield: goblit_dongle goblit_display
     snippet: studio-rpc-usb-uart
     artifact-name: goblit_dongle
   - board: nice_nano//zmk
