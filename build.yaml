@@ -19,6 +19,6 @@
 ---
 include:
   - board: nice_nano//zmk
-    shield: temper_left
+    shield: goblit_left
   - board: nice_nano//zmk
-    shield: temper_right
+    shield: goblit_right

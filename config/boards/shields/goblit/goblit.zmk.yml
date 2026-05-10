@@ -1,8 +1,8 @@
 file_format: "1"
-id: temper
-name: Chocofi Temper
+id: goblit
+name: Goblit by Timception
 type: shield
-url: https://github.com/raeedcho/chocofi-temper
+url: https://github.com/Timception/goblit
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
@@ -10,5 +10,5 @@ features:
   - display
   - underglow
 siblings:
-  - temper_left
-  - temper_right
+  - goblit_left
+  - goblit_right

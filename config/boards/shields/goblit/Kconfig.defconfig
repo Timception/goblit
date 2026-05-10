@@ -1,14 +1,14 @@
-if SHIELD_TEMPER_LEFT
+if SHIELD_GOBLIT_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "temper"
+    default "goblit"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_TEMPER_LEFT || SHIELD_TEMPER_RIGHT
+if SHIELD_GOBLIT_LEFT || SHIELD_GOBLIT_RIGHT
 
 config ZMK_SPLIT
     default y
