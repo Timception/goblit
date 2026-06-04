@@ -70,7 +70,7 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-		zmk,physical-layout = &drift_5col_layout;
+		zmk,physical-layout = &goblit_5col_layout;
 		zephyr,display = &oled;
     };
 		
