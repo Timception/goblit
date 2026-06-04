@@ -1,7 +1,7 @@
 // Copyright (c) 2025 The ZMK Contributors
 // SPDX-License-Identifier: MIT
 
-#include "drift.dtsi"
+#include "goblit.dtsi"
 
 // Enable left encoder device (for volume, scrolling, etc.)
 &left_encoder {
