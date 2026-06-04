@@ -2,12 +2,33 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    - name: badjeff
+      url-base: https://github.com/badjeff
+    - name: nuovotaka
+      url-base: https://github.com/nuovotaka
+    - name: timception
+      url-base: https://github.com/timception
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-pmw3610-driver
+      remote: badjeff
+      revision: main
+    - name: zmk-pointing-acceleration-alpha
+      remote: nuovotaka
+      revision: main
+    - name: zmk-behavior-key-press-lip
+      remote: timception
+      revision: main
   self:
     path: config
+
+
+
+
+
+
+
+

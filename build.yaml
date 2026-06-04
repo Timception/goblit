@@ -20,7 +20,7 @@
 ---
 include:  
   - board: nice_nano//zmk
-    shield: goblit_left
+    shield: goblit_left    
     artifact-name: goblit_left
   - board: nice_nano//zmk
     shield: goblit_right    

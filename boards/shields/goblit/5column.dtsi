@@ -3,58 +3,53 @@
 / {
     goblit_5col_layout: goblit_5col_layout {
         compatible = "zmk,physical-layout";
-        transform = <&default_transform>;
+		transform = <&default_transform>;
         display-name = "5 Column";
 
-        keys  //                     w   h    x    y     rot    rx    ry
-
-            // Row 0 — Left (cols 0–4)
-            = <&key_physical_attrs 100 100    0    0       0     0     0>
-            , <&key_physical_attrs 100 100  100    0       0     0     0>
-            , <&key_physical_attrs 100 100  200    0       0     0     0>
-            , <&key_physical_attrs 100 100  300    0       0     0     0>
+		keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100  200   30       0     0     0>
+            , <&key_physical_attrs 100 100  300   10       0     0     0>
             , <&key_physical_attrs 100 100  400    0       0     0     0>
-            // Row 0 — Right (cols 5–9)
-            , <&key_physical_attrs 100 100  700    0       0     0     0>
-            , <&key_physical_attrs 100 100  800    0       0     0     0>
-            , <&key_physical_attrs 100 100  900    0       0     0     0>
-            , <&key_physical_attrs 100 100 1000    0       0     0     0>
-            , <&key_physical_attrs 100 100 1100    0       0     0     0>
-
-            // Row 1 — Left (cols 0–4)
-            , <&key_physical_attrs 100 100    0  100       0     0     0>
-            , <&key_physical_attrs 100 100  100  100       0     0     0>
-            , <&key_physical_attrs 100 100  200  100       0     0     0>
-            , <&key_physical_attrs 100 100  300  100       0     0     0>
+            , <&key_physical_attrs 100 100  500   10       0     0     0>
+            , <&key_physical_attrs 100 100  600   20       0     0     0>
+            , <&key_physical_attrs 100 100 1100   20       0     0     0>
+            , <&key_physical_attrs 100 100 1200   10       0     0     0>
+            , <&key_physical_attrs 100 100 1300    0       0     0     0>
+            , <&key_physical_attrs 100 100 1400   10       0     0     0>
+            , <&key_physical_attrs 100 100 1500   30       0     0     0>
+			
+            , <&key_physical_attrs 100 100  200  130       0     0     0>
+            , <&key_physical_attrs 100 100  300  110       0     0     0>
             , <&key_physical_attrs 100 100  400  100       0     0     0>
-            // Row 1 — Right (cols 5–9)
-            , <&key_physical_attrs 100 100  700  100       0     0     0>
-            , <&key_physical_attrs 100 100  800  100       0     0     0>
-            , <&key_physical_attrs 100 100  900  100       0     0     0>
-            , <&key_physical_attrs 100 100 1000  100       0     0     0>
-            , <&key_physical_attrs 100 100 1100  100       0     0     0>
-
-            // Row 2 — Left (cols 0–4)
-            , <&key_physical_attrs 100 100    0  200       0     0     0>
-            , <&key_physical_attrs 100 100  100  200       0     0     0>
-            , <&key_physical_attrs 100 100  200  200       0     0     0>
-            , <&key_physical_attrs 100 100  300  200       0     0     0>
+            , <&key_physical_attrs 100 100  500  110       0     0     0>
+            , <&key_physical_attrs 100 100  600  120       0     0     0>
+            , <&key_physical_attrs 100 100 1100  120       0     0     0>
+            , <&key_physical_attrs 100 100 1200  110       0     0     0>
+            , <&key_physical_attrs 100 100 1300  100       0     0     0>
+            , <&key_physical_attrs 100 100 1400  110       0     0     0>
+            , <&key_physical_attrs 100 100 1500  130       0     0     0>
+			
+            , <&key_physical_attrs 100 100  200  230       0     0     0>
+            , <&key_physical_attrs 100 100  300  210       0     0     0>
             , <&key_physical_attrs 100 100  400  200       0     0     0>
-            // Row 2 — Right (cols 5–9)
-            , <&key_physical_attrs 100 100  700  200       0     0     0>
-            , <&key_physical_attrs 100 100  800  200       0     0     0>
-            , <&key_physical_attrs 100 100  900  200       0     0     0>
-            , <&key_physical_attrs 100 100 1000  200       0     0     0>
-            , <&key_physical_attrs 100 100 1100  200       0     0     0>
-
-            // Row 3 — Left Thumbs (cols 2–4)
-            , <&key_physical_attrs 100 100  200  300       0     0     0>
-            , <&key_physical_attrs 100 100  300  300       0     0     0>
-            , <&key_physical_attrs 100 100  400  300       0     0     0>
-            // Row 3 — Right Thumbs (cols 5–7)
-            , <&key_physical_attrs 100 100  700  300       0     0     0>
-            , <&key_physical_attrs 100 100  800  300       0     0     0>
-            , <&key_physical_attrs 100 100  900  300       0     0     0>
-            ;
+            , <&key_physical_attrs 100 100  500  210       0     0     0>
+            , <&key_physical_attrs 100 100  600  220       0     0     0>
+			
+			, <&key_physical_attrs 100 100  720  340       0     0     0>
+            , <&key_physical_attrs 100 100  980  340       0     0     0>
+			
+            , <&key_physical_attrs 100 100 1100  220       0     0     0>
+            , <&key_physical_attrs 100 100 1200  210       0     0     0>
+            , <&key_physical_attrs 100 100 1300  200       0     0     0>
+            , <&key_physical_attrs 100 100 1400  210       0     0     0>
+            , <&key_physical_attrs 100 100 1500  230       0     0     0>			
+			
+            , <&key_physical_attrs 100 100  480  320       0     0     0>
+            , <&key_physical_attrs 100 100  468  353    2300   600   800>
+            , <&key_physical_attrs 100 100  474  385    4500   600   800>
+			
+            , <&key_physical_attrs 100 100 1225  385 (-4500)  1200   800>
+            , <&key_physical_attrs 100 100 1232  353 (-2300)  1200   800>
+        ;
     };
 };

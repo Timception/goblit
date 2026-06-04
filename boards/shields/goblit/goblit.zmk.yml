@@ -1,14 +1,16 @@
 file_format: "1"
 id: goblit
-name: Goblit by Timception
+name: goblit
 type: shield
-url: https://github.com/Timception/goblit
+url: https://github.com/Timception
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
   - keys
   - display
+  - encoder
   - underglow
+  - studio
 siblings:
   - goblit_left
   - goblit_right
