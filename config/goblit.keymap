@@ -49,16 +49,25 @@
 		
 		/* Setup left and right */
         kpad: key_lip_a_d {
-                compatible = "zmk,behavior-key-press-lip";
-                #binding-cells = <1>;
-                keycodes = <A D>;
+            compatible = "zmk,behavior-key-press-lip";
+            #binding-cells = <1>;
+            keycodes = <A D>;
         };
 
         /* Setup up and down */
         kpws: key_lip_w_s {
-                compatible = "zmk,behavior-key-press-lip";
-                #binding-cells = <1>;
-                keycodes = <W S>;
+            compatible = "zmk,behavior-key-press-lip";
+            #binding-cells = <1>;
+            keycodes = <W S>;
+        };
+
+        /* mod-morph for backspace, shift (either side) + backspace = delete */
+        bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>; 
         };
     };
 
@@ -88,18 +97,17 @@
         // -------------------------------------------------------------------------------
         // BASE Layer
         // -------------------------------------------------------------------------------
-        // | ESC | ` | 1 | 2 |  3  |  4  |  5  |         |  6  |  7  | 8 | 9 | 0 | -  | = |
-        // |COPY |TAB| Q | W |  E  |  R  |  T  |         |  Y  |  U  | I | O | P | [  | ] |
-        // | GUI |CAP| A | S |  D  |  F  |  G  |         |  H  |  J  | K | L | ; | '  |ENT|
-        // | CTL |ALT| Z | X |  C  |  V  |  B  |Paste| \ |  N  |  M  | , | . | / |Bspc|Del|
-        //                   |Shift|Space|Lower|         |Raise|Space|
+        // |  Q  | W |  E  |  R  |  T  |             |  Y  |  U  | I | O | P |
+        // |  A  | S |  D  |  F  |  G  |             |  H  |  J  | K | L | ; |
+        // |  Z  | X |  C  |  V  |  B  |Paste|Bsp/Del|  N  |  M  | , | . | / |
+        //           |Shift|Enter|Lower|             |Raise|Space|
         default_layer {
             display-name = "base";
             bindings = <
-                &kp Q    &kpws W  &kp E     &kp R     &kp T                        &kp Y     &kp U     &kp I     &kp O   &kp P
-                &kpad A  &kpws S  &kpad D   &kp F     &kp G                        &kp H     &kp J     &kp K     &kp L   &kp SEMI
-                &kp Z    &kp X    &kp C     &kp V     &kp B     &kp LC(V) &kp BSLH &kp N     &kp M     &kp COMMA &kp DOT &kp FSLH
-                                  &kp LSHFT &kp SPACE &mo LOWER                    &mo RAISE &kp SPACE
+                &kp Q    &kpws W  &kp E     &kp R     &kp T                          &kp Y     &kp U     &kp I     &kp O   &kp P
+                &kpad A  &kpws S  &kpad D   &kp F     &kp G                          &kp H     &kp J     &kp K     &kp L   &kp SEMI
+                &kp Z    &kp X    &kp C     &kp V     &kp B     &kp LC(V) &bspc_del  &kp N     &kp M     &kp COMMA &kp DOT &kp FSLH
+                                  &kp LSHFT &kp ENTER &mo LOWER                      &mo RAISE &kp SPACE
             >;
             sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
         };
@@ -107,18 +115,17 @@
         // ------------------------------------------------------------------------
         // LOWER Layer
         // ------------------------------------------------------------------------
-        // |Esc | ` |F1 |F2 |F3  | F4  |F5 |         |F6 |  F7 | F8 |F9 |F10|F11|F12|
-        // |    |TAB| Q | W | E  |  R  | T |         | Y |  U  | I  | O | P | [ | \ |
-        // |GUI |CAP| A | S | D  |  F  | G |         | H |  J  | K  | L | ; | ↑ |Ent|
-        // |CTL |ALT| Z | X | C  |  V  | B |Vol-|Vol+| N |  M  | ,  | . | ← | ↓ | → |
-        //                  |Boot|Space|   |         |   |Space|
+        // |TAB| F2 | F3 |  F4  |  F5  |         | F6  |  F7  | F8 | F9 |F10 |
+        // | A |  S |  D |  F   |  G   |         |  H  |  J   | K  | L  | ;  |
+        // | Z |  X |  C |  V   |  B   |Vol-|Vol+|  N  |  M   | ,  | .  | ←  |
+        //              |Mouse|  ▽  |  ▽  |         |  ▽  |  ▽  |
         lower_layer {
             display-name = "lower";
             bindings = <
-                &kp F1 &kp F2 &kp F3      &kp F4    &kp F5                           &kp F6  &kp F7    &kp F8    &kp F9    &kp F10
-                &kp A  &kp S  &kp D       &kp F     &kp G                            &kp H   &kp J     &kp K     &kp L     &kp SEMI
-                &kp Z  &kp X  &kp C       &kp V     &kp B  &kp C_VOL_DN &kp C_VOL_UP &kp N   &kp M     &kp COMMA &kp DOT   &kp LEFT_ARROW
-                              &bootloader &kp SPACE &trans                           &trans  &kp SPACE
+                &kp TAB &kp F2 &kp F3      &kp F4    &kp F5                           &kp F6  &kp F7    &kp F8    &kp F9    &kp F10
+                &kp A   &kp S  &kp D       &kp F     &kp G                            &kp H   &kp J     &kp K     &kp L     &kp SEMI
+                &kp Z   &kp X  &kp C       &kp V     &kp B  &kp C_VOL_DN &kp C_VOL_UP &kp N   &kp M     &kp COMMA &kp DOT   &kp LEFT_ARROW
+                               &mo MOUSE   &trans    &trans                           &trans  &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
@@ -137,15 +144,18 @@
                 &bt BT_CLR_ALL &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2                          &to MOUSE2 &kp F7    &kp F10        &msc SCRL_UP   &mkp MB4
                 &bt BT_SEL 3   &bt BT_SEL 4 &kp A        &kp S        &kp D                                 &kp H      &kp J     &mkp LCLK      &mmv MOVE_UP   &mkp RCLK
                 &trans         &trans       &kp Z        &kp X        &kp C        &kp C_VOL_DN &bootloader &kp N      &kp M     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT
-                                            &bootloader  &kp SPACE    &trans                                &trans     &kp SPACE
+                                            &trans       &trans       &trans                                &trans     &kp SPACE
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        // ---------------------------------------------------------------------
+        // -----------------------------------------------------
         // ADJUST Layer
-        // ---------------------------------------------------------------------
-        // (similar layout as RAISE, but with slightly different mods)
+        // -----------------------------------------------------
+        // |TAB| W |  E  |  R  |  T  |         |  Y  |  U  |  P |Scr↓|MClk|
+        // |CAP| S |  D  |  F  |  G  |         |  H  |  J  |LClk| ↑  |RClk|
+        // | ▽ | X |  C  |  V  |  B  |Vol-|Vol+|  N  |  M  | ←  | ↓  | →  |
+        //         |Shift|Space|  ▽  |         |  ▽  |Space|
         adjust_layer {
             display-name = "adjust";
             bindings = <
