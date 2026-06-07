@@ -170,8 +170,10 @@
         // ---------------------------------------------------------------------
         // MOUSE Layer
         // ---------------------------------------------------------------------
-        // Mostly for orbit/pan macros + mouse buttons
-		
+        // | ▽ | ▽ | ▽ | ▽ | ▽ |       | ▽ |  ▽  |  ▽  |Scroll| ▽ |
+        // | ▽ | ▽ | ▽ | ▽ | ▽ |       | ▽ | MB3 | MB1 | MB2  | ▽ |
+        // | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ |  ▽  | Pan |Orbit | ▽ |
+        //         | ▽ | ▽ | ▽ |       | ▽ |  ▽  |
         mouse_layer {
             display-name = "mouse";
             bindings = <
@@ -183,8 +185,14 @@
             sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
         };
 
-        // SCROLL / MOUSE2  layers remain mostly transparent and is used for when you want to turn mouse mode on indefinitely (activated on RAISE Layer - "&to MOUSE2")
-        
+        // ---------------------------------------------------------------------
+        // SCROLL Layer
+        // ---------------------------------------------------------------------
+        // Mostly transparent - encoder scrolls while held from MOUSE layer
+        // | ▽ | ▽ | ▽ | ▽ | ▽ |       | ▽ | ▽ | ▽ | ▽ | ▽ |
+        // | ▽ | ▽ | ▽ | ▽ | ▽ |       | ▽ | ▽ | ▽ | ▽ | ▽ |
+        // | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ |
+        //         | ▽ | ▽ | ▽ |       | ▽ | ▽ |
         scroll_layer {
             display-name = "scroll";
             bindings = <
@@ -196,6 +204,14 @@
             sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
         };
 
+        // ---------------------------------------------------------------------
+        // MOUSE2 Layer
+        // ---------------------------------------------------------------------
+        // Persistent mouse mode (toggled from RAISE Layer via &to MOUSE2)
+        // | ▽ | ▽ | ▽ | ▽ | ▽ |       |Base|  ▽  |  ▽  |Scroll2| ▽ |
+        // | ▽ | ▽ | ▽ | ▽ | ▽ |       | ▽  | MB3 | MB1 | MB2   | ▽ |
+        // | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽  |  ▽  | Pan |Orbit  | ▽ |
+        //         | ▽ | ▽ | ▽ |       | ▽  |  ▽  |
         mouse2_layer {
             display-name = "mouse2";
             bindings = <
@@ -207,7 +223,15 @@
             sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
         };
 		
-		scroll2_layer {
+        // ---------------------------------------------------------------------
+        // SCROLL2 Layer
+        // ---------------------------------------------------------------------
+        // Mostly transparent - encoder scrolls while held from MOUSE2 layer
+        // | ▽ | ▽ | ▽ | ▽ | ▽ |       | ▽ | ▽ | ▽ | ▽ | ▽ |
+        // | ▽ | ▽ | ▽ | ▽ | ▽ |       | ▽ | ▽ | ▽ | ▽ | ▽ |
+        // | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ |
+        //         | ▽ | ▽ | ▽ |       | ▽ | ▽ |
+        scroll2_layer {
             display-name = "scroll2";
             bindings = <
                 &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans
