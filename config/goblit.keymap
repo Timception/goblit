@@ -97,10 +97,10 @@
         // -------------------------------------------------------------------------------
         // BASE Layer
         // -------------------------------------------------------------------------------
-        // |  Q  | W |  E  |  R  |  T  |             |  Y  |  U  | I | O | P |
-        // |  A  | S |  D  |  F  |  G  |             |  H  |  J  | K | L | ; |
-        // |  Z  | X |  C  |  V  |  B  |Paste|Bsp/Del|  N  |  M  | , | . | / |
-        //           |Shift|Enter|Lower|             |Raise|Space|
+        // |  Q  |  W  |   E   |  R  |   T   |                 |   Y   |  U  |  I  |  O  |  P  |
+        // |  A  |  S  |   D   |  F  |   G   |                 |   H   |  J  |  K  |  L  |  ;  |
+        // |  Z  |  X  |   C   |  V  |   B   | Paste | Bsp/Del |   N   |  M  |  ,  |  .  |  /  |
+        //             | Shift | Enter | Lower |                 | Raise | Space |
         default_layer {
             display-name = "base";
             bindings = <
@@ -115,10 +115,10 @@
         // ------------------------------------------------------------------------
         // LOWER Layer
         // ------------------------------------------------------------------------
-        // |TAB| F2 | F3 |  F4  |  F5  |         | F6  |  F7  | F8 | F9 |F10 |
-        // | A |  S |  D |  F   |  G   |         |  H  |  J   | K  | L  | ;  |
-        // | Z |  X |  C |  V   |  B   |Vol-|Vol+|  N  |  M   | ,  | .  | ←  |
-        //              |Mouse|  ▽  |  ▽  |         |  ▽  |  ▽  |
+        // | TAB |  F2 |  F3 |  F4 |   F5  |             |   F6  |  F7 |  F8 |  F9 | F10 |
+        // |  A  |  S  |  D  |  F  |   G   |             |   H   |  J  |  K  |  L  |  ;  |
+        // |  Z  |  X  |  C  |  V  |   B   | VolDn | VolUp |   N   |  M  |  ,  |  .  |  ←  |
+        //             | Mouse | Enter | Lower |             | Raise | Space |
         lower_layer {
             display-name = "lower";
             bindings = <
@@ -127,17 +127,16 @@
                 &kp Z   &kp X  &kp C       &kp V     &kp B  &kp C_VOL_DN &kp C_VOL_UP &kp N   &kp M     &kp COMMA &kp DOT   &kp LEFT_ARROW
                                &mo MOUSE   &trans    &trans                           &trans  &trans
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        x    sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         // ---------------------------------------------------------------------------
         // RAISE Layer
         // ---------------------------------------------------------------------------
-        // |ClrAll|Clr|BT1|BT2|BT3 | BT4 |BT5|         |M2 | F7  |F8 |F9 |F10 |Scr↑|MB4 |
-        // |      |TAB| Q | W | E  |  R  | T |         | Y |  U  | I | O | P  |Scr↓|MClk|
-        // | GUI  |CAP| A | S | D  |  F  | G |         | H |  J  | K | L |LClk| ↑  |RClk|
-        // | CTL  |ALT| Z | X | C  |  V  | B |Vol-|Boot| N |  M  | , | . | ←  | ↓  | →  |
-        //                    |Boot|Space|   |         |   |Space|
+        // | ClrAll | Clear | BT1   | BT2 |   BT3 |              | Mouse2 |  F7  |  F10  | Scrl↑ | MB4   |
+        // |  BT4   |  BT5  |  A    |  S  |    D  |              |   H    |  J   | LClick|   ↑   | RClick|
+        // |  Z(B)  |  X(B) |  Z    |  X  |    C  | VolDn | Boot |   N    |  M   |   ←   |   ↓   |   →   |
+        //                  | Shift | Enter | Lower |              | Raise  | Space |
         raise_layer {
             display-name = "raise";
             bindings = <
@@ -152,10 +151,10 @@
         // -----------------------------------------------------
         // ADJUST Layer
         // -----------------------------------------------------
-        // |TAB| W |  E  |  R  |  T  |         |  Y  |  U  |  P |Scr↓|MClk|
-        // |CAP| S |  D  |  F  |  G  |         |  H  |  J  |LClk| ↑  |RClk|
-        // | ▽ | X |  C  |  V  |  B  |Vol-|Vol+|  N  |  M  | ←  | ↓  | →  |
-        //         |Shift|Space|  ▽  |         |  ▽  |Space|
+        // |  TAB  |  W  |   E   |  R  |    T    |               |    Y    |  U  |   P    | Scrl↓ |  MClick  |
+        // |  Caps |  S  |   D   |  F  |    G    |               |    H    |  J  | LClick | Scrl↑ |  RClick  |
+        // |   Q   |  X  |   C   |  V  |    B    | VolDn | VolUp  |    N    |  M  |   ←    |   ↓   |    →     |
+        //               | Shift | Space | Lower |               | Raise | Space |
         adjust_layer {
             display-name = "adjust";
             bindings = <
@@ -170,10 +169,11 @@
         // ---------------------------------------------------------------------
         // MOUSE Layer
         // ---------------------------------------------------------------------
-        // | ▽ | ▽ | ▽ | ▽ | ▽ |       | ▽ |  ▽  |  ▽  |Scroll| ▽ |
-        // | ▽ | ▽ | ▽ | ▽ | ▽ |       | ▽ | MB3 | MB1 | MB2  | ▽ |
-        // | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ |  ▽  | Pan |Orbit | ▽ |
-        //         | ▽ | ▽ | ▽ |       | ▽ |  ▽  |
+        // (active on top of LOWER; &trans falls through to LOWER then BASE)
+        // | TAB |  F2 |  F3 |  F4 |   F5  |              |   F6  |  F7 |  F8 | Scroll |  F10  |
+        // |  A  |  S  |  D  |  F  |   G   |              |   H   | MB3 | MB1 |  MB2   |   ;   |
+        // |  Z  |  X  |  C  |  V  |   B   | VolDn | VolUp |   N   |  M  | Pan | Orbit  |   ←   |
+        //             | Mouse | Enter | Lower |              | Raise | Space |
         mouse_layer {
             display-name = "mouse";
             bindings = <
@@ -189,10 +189,11 @@
         // SCROLL Layer
         // ---------------------------------------------------------------------
         // Mostly transparent - encoder scrolls while held from MOUSE layer
-        // | ▽ | ▽ | ▽ | ▽ | ▽ |       | ▽ | ▽ | ▽ | ▽ | ▽ |
-        // | ▽ | ▽ | ▽ | ▽ | ▽ |       | ▽ | ▽ | ▽ | ▽ | ▽ |
-        // | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ |
-        //         | ▽ | ▽ | ▽ |       | ▽ | ▽ |
+        // (active on top of MOUSE+LOWER; &trans falls through to MOUSE, then LOWER, then BASE)
+        // | TAB |  F2 |  F3 |  F4 |   F5  |              |   F6  |  F7 |  F8 | Scroll |  F10  |
+        // |  A  |  S  |  D  |  F  |   G   |              |   H   | MB3 | MB1 |  MB2   |   ;   |
+        // |  Z  |  X  |  C  |  V  |   B   | VolDn | VolUp |   N   |  M  | Pan | Orbit  |   ←   |
+        //             | Mouse | Enter | Lower |              | Raise | Space |
         scroll_layer {
             display-name = "scroll";
             bindings = <
@@ -208,10 +209,11 @@
         // MOUSE2 Layer
         // ---------------------------------------------------------------------
         // Persistent mouse mode (toggled from RAISE Layer via &to MOUSE2)
-        // | ▽ | ▽ | ▽ | ▽ | ▽ |       |Base|  ▽  |  ▽  |Scroll2| ▽ |
-        // | ▽ | ▽ | ▽ | ▽ | ▽ |       | ▽  | MB3 | MB1 | MB2   | ▽ |
-        // | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽  |  ▽  | Pan |Orbit  | ▽ |
-        //         | ▽ | ▽ | ▽ |       | ▽  |  ▽  |
+        // (only active layer; &trans falls through to BASE)
+        // |  Q  |  W  |   E   |  R  |   T   |                 |  Base  |  U  |   I   | Scroll2 |  P  |
+        // |  A  |  S  |   D   |  F  |   G   |                 |   H    | MB3 |  MB1  |  MB2    |  ;  |
+        // |  Z  |  X  |   C   |  V  |   B   | Paste | Bsp/Del |   N    |  M  |  Pan  |  Orbit  |  /  |
+        //             | Shift | Enter | Lower |                 | Raise  | Space |
         mouse2_layer {
             display-name = "mouse2";
             bindings = <
@@ -227,10 +229,11 @@
         // SCROLL2 Layer
         // ---------------------------------------------------------------------
         // Mostly transparent - encoder scrolls while held from MOUSE2 layer
-        // | ▽ | ▽ | ▽ | ▽ | ▽ |       | ▽ | ▽ | ▽ | ▽ | ▽ |
-        // | ▽ | ▽ | ▽ | ▽ | ▽ |       | ▽ | ▽ | ▽ | ▽ | ▽ |
-        // | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ | ▽ |
-        //         | ▽ | ▽ | ▽ |       | ▽ | ▽ |
+        // (active on top of MOUSE2; &trans falls through to MOUSE2, then BASE)
+        // |  Q  |  W  |   E   |  R  |   T   |                 |  Base  |  U  |   I   | Scroll2 |  P  |
+        // |  A  |  S  |   D   |  F  |   G   |                 |   H    | MB3 |  MB1  |  MB2    |  ;  |
+        // |  Z  |  X  |   C   |  V  |   B   | Paste | Bsp/Del |   N    |  M  |  Pan  |  Orbit  |  /  |
+        //             | Shift | Enter | Lower |                 | Raise  | Space |
         scroll2_layer {
             display-name = "scroll2";
             bindings = <
