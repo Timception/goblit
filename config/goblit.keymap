@@ -127,7 +127,7 @@
                 &kp Z   &kp X  &kp C       &kp V     &kp B  &kp C_VOL_DN &kp C_VOL_UP &kp N   &kp M     &kp COMMA &kp DOT   &kp LEFT_ARROW
                                &mo MOUSE   &trans    &trans                           &trans  &trans
             >;
-        x    sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         // ---------------------------------------------------------------------------
