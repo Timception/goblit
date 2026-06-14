@@ -26,6 +26,7 @@
 #define SCROLL  5
 #define MOUSE2  6
 #define SCROLL2 7
+#define TB_OFF  8
 
 // Reference: https://zmk.dev/docs/keymaps/behaviors/
 
@@ -164,9 +165,9 @@
         raise_layer {
             display-name = "raise";
             bindings = <
-                &trans     &trans     &trans    &trans    &trans                               &to MOUSE2  &trans    &trans  &trans     &trans
-                &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &kp TAB                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &gresc
-                &trans     &trans     &trans    &trans    &trans    &kp LC(UP) &kp LS(LG(N4))  &trans      &trans    &trans  &trans     &trans
+                &trans     &trans     &trans    &trans    &trans                               &to MOUSE2  &to TB_OFF  &trans  &trans     &trans
+                &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &kp TAB                              &kp LEFT    &kp DOWN    &kp UP  &kp RIGHT  &gresc
+                &trans     &trans     &trans    &trans    &trans    &kp LC(UP) &kp LS(LG(N4))  &trans      &trans      &trans  &trans     &trans
                                       &trans    &trans    &trans                               &trans      &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -244,6 +245,21 @@
                 &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                               &trans &trans &trans               &trans &trans
+            >;
+            sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
+        };
+
+        // ---------------------------------------------------------------------------------------------------------------------------------
+        // TB_OFF Layer
+        // ---------------------------------------------------------------------------------------------------------------------------------
+        
+        tb_off_layer {
+            display-name = "scroll";
+            bindings = <
+                &trans &trans &trans &trans &trans               &to BASE &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans               &trans   &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans
+                              &trans &trans &trans               &trans   &trans
             >;
             sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
         };
