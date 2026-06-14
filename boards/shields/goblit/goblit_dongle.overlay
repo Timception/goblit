@@ -96,8 +96,8 @@
         multiplex-ratio = <63>;
 		
 		// Responsible for oled invert
-        segment-remap;
-        com-invdir;
+        //segment-remap;
+        //com-invdir;
 
         //com-sequential;
         inversion-on;

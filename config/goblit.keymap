@@ -80,11 +80,11 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 		
-		/* mod-morph for &mo 1, shift (either side) + &mo 1 = delete */
-		sft_mo1_del: sft_mo1_del {
+		/* mod-morph for &mo 2, shift (either side) + &mo 2 = delete */
+		sft_mo2_del: sft_mo2_del {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&mo 1>, <&kp DEL>;
+			bindings = <&mo 2>, <&kp DEL>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 		
@@ -137,7 +137,7 @@
                 &kp Q    &kpws W  &kp E     &kp R     &kp T                            &kp Y        &kp U     &kp I     &kp O   &kp P
                 &kpad A  &kpws S  &kpad D   &kp F     &kp G                            &kp H        &kp J     &kp K     &kp L   &kp SEMI
                 &kp Z    &kp X    &kp C     &kp V     &kp B      &kp LG(V) &slh_morph  &kp N        &kp M     &kp COMMA &kp DOT &kp FSLH
-                                  &kp LSHFT &kp ENTER &mo LOWER                        &sft_mo1_del &spc_bspc
+                                  &kp LSHFT &kp ENTER &mo LOWER                        &sft_mo2_del &spc_bspc
             >;
             sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
         };
