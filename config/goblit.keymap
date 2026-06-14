@@ -97,10 +97,10 @@
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-        sft_mo9_del: sft_mo9_del {
+        sft_mo10_del: sft_mo10_del {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&mo 9>, <&kp DEL>;
+			bindings = <&mo 10>, <&kp DEL>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 		
@@ -271,10 +271,10 @@
         trackb_off_layer {
             display-name = "trackb_off";
             bindings = <
-                &kp Q    &kpws W  &kp E     &kp R     &kp T                             &kp Y        &kp U     &kp I     &kp O   &kp P
-                &kpad A  &kpws S  &kpad D   &kp F     &kp G                             &kp H        &kp J     &kp K     &kp L   &kp SEMI
-                &kp Z    &kp X    &kp C     &kp V     &kp B       &kp LG(V) &slh_morph  &kp N        &kp M     &kp COMMA &kp DOT &kp FSLH
-                                  &kp LSHFT &kp ENTER &mo LOWER2                        &sft_mo9_del &spc_bspc
+                &kp Q    &kpws W  &kp E     &kp R     &kp T                             &kp Y         &kp U     &kp I     &kp O   &kp P
+                &kpad A  &kpws S  &kpad D   &kp F     &kp G                             &kp H         &kp J     &kp K     &kp L   &kp SEMI
+                &kp Z    &kp X    &kp C     &kp V     &kp B       &kp LG(V) &slh_morph  &kp N         &kp M     &kp COMMA &kp DOT &kp FSLH
+                                  &kp LSHFT &kp ENTER &mo LOWER2                        &sft_mo10_del &spc_bspc
             >;
             sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
         };
