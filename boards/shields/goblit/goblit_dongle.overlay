@@ -65,8 +65,9 @@
             <&zip_xy_to_scroll_mapper>;
 	};
     off {
-        layers = <8>;
-        input-processors = <>;
+    layers = <8>;
+    input-processors =
+        <&zip_xy_scaler 1 1000000>;
     };
 };
 
