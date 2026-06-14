@@ -18,15 +18,18 @@
 #define ZMK_BEHAVIORS_OMIT_KT
 
 // Layer indices
-#define BASE    0
-#define LOWER   1
-#define RAISE   2
-#define ADJUST  3
-#define MOUSE   4
-#define SCROLL  5
-#define MOUSE2  6
-#define SCROLL2 7
-#define TB_OFF  8
+#define BASE        0
+#define LOWER       1
+#define RAISE       2
+#define ADJUST      3
+#define MOUSE       4
+#define SCROLL      5
+#define MOUSE2      6
+#define SCROLL2     7
+#define TRACKB_OFF  8
+#define LOWER2      9
+#define RAISE2      10
+#define ADJUST2     11
 
 // Reference: https://zmk.dev/docs/keymaps/behaviors/
 
@@ -37,6 +40,11 @@
         tri_layer {
             if-layers = <LOWER RAISE>;
             then-layer = <ADJUST>;
+        };
+
+        tri_layer2 {
+            if-layers = <LOWER2 RAISE2>;
+            then-layer = <ADJUST2>;
         };
     };
 
@@ -86,6 +94,13 @@
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&mo 2>, <&kp DEL>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+
+        sft_mo9_del: sft_mo9_del {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&mo 9>, <&kp DEL>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 		
@@ -165,9 +180,9 @@
         raise_layer {
             display-name = "raise";
             bindings = <
-                &trans     &trans     &trans    &trans    &trans                               &to MOUSE2  &to TB_OFF  &trans  &trans     &trans
-                &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &kp TAB                              &kp LEFT    &kp DOWN    &kp UP  &kp RIGHT  &gresc
-                &trans     &trans     &trans    &trans    &trans    &kp LC(UP) &kp LS(LG(N4))  &trans      &trans      &trans  &trans     &trans
+                &trans     &trans     &trans    &trans    &trans                               &to MOUSE2  &to TRACKB_OFF  &trans  &trans     &trans
+                &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &kp TAB                              &kp LEFT    &kp DOWN        &kp UP  &kp RIGHT  &gresc
+                &trans     &trans     &trans    &trans    &trans    &kp LC(UP) &kp LS(LG(N4))  &trans      &trans          &trans  &trans     &trans
                                       &trans    &trans    &trans                               &trans      &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -226,9 +241,9 @@
         mouse2_layer {
             display-name = "mouse2";
             bindings = <
-                &trans &trans &trans &trans &trans               &to BASE &trans   &trans   &mo SCROLL2 &trans
-                &trans &trans &trans &trans &trans               &trans   &mkp MB3 &mkp MB1 &mkp MB2    &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans   &trans   &pan     &orbit      &trans
+                &trans &trans &trans &trans &trans               &to BASE &to TRACKB_OFF  &trans   &mo SCROLL2 &trans
+                &trans &trans &trans &trans &trans               &trans   &mkp MB3        &mkp MB1 &mkp MB2    &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans   &trans          &pan     &orbit      &trans
                               &trans &trans &trans               &trans   &trans
             >;
             sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
@@ -250,18 +265,63 @@
         };
 
         // ---------------------------------------------------------------------------------------------------------------------------------
-        // TB_OFF Layer
+        // TRACKB_OFF Layer
         // ---------------------------------------------------------------------------------------------------------------------------------
         
-        tb_off_layer {
-            display-name = "scroll";
+        trackb_off_layer {
+            display-name = "trackb_off";
             bindings = <
-                &trans &trans &trans &trans &trans               &to BASE &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans               &trans   &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans
-                              &trans &trans &trans               &trans   &trans
+                &kp Q    &kpws W  &kp E     &kp R     &kp T                             &kp Y        &kp U     &kp I     &kp O   &kp P
+                &kpad A  &kpws S  &kpad D   &kp F     &kp G                             &kp H        &kp J     &kp K     &kp L   &kp SEMI
+                &kp Z    &kp X    &kp C     &kp V     &kp B       &kp LG(V) &slh_morph  &kp N        &kp M     &kp COMMA &kp DOT &kp FSLH
+                                  &kp LSHFT &kp ENTER &mo LOWER2                        &sft_mo9_del &spc_bspc
             >;
             sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
+        };
+
+        // ---------------------------------------------------------------------------------------------------------------------------------
+        // LOWER2 Layer
+        // ---------------------------------------------------------------------------------------------------------------------------------
+        
+        lower2_layer {
+            display-name = "lower2";
+            bindings = <
+                &kp TILDE    &kp AT    &kp LBRC   &kp RBRC  &kp PRCNT                             &kp STAR   &kp N7  &kp N8  &kp N9  &kp MINUS
+                &kp CARET    &kp HASH  &kp LPAR   &kp RPAR  &kp DLLR                              &kp UNDER  &kp N4  &kp N5  &kp N6  &kp PLUS
+                &amps_morph  &kp LT    &kp LBKT   &kp RBKT  &kp GT     &kp C_VOL_DN &kp C_VOL_UP  &kp N0     &kp N1  &kp N2  &kp N3  &kp EQUAL
+                                       &trans     &trans    &trans                                &trans     &trans
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+
+        // ---------------------------------------------------------------------------------------------------------------------------------
+        // RAISE2 Layer
+        // ---------------------------------------------------------------------------------------------------------------------------------
+        
+        raise2_layer {
+            display-name = "raise2";
+            bindings = <
+                &trans     &trans     &trans    &trans    &trans                               &to MOUSE2  &to BASE  &trans  &trans     &trans
+                &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &kp TAB                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &gresc
+                &trans     &trans     &trans    &trans    &trans    &kp LC(UP) &kp LS(LG(N4))  &trans      &trans    &trans  &trans     &trans
+                                      &trans    &trans    &trans                               &trans      &trans
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+
+        // ---------------------------------------------------------------------------------------------------------------------------------
+        // ADJUST2 Layer
+        // ---------------------------------------------------------------------------------------------------------------------------------
+        
+        adjust2_layer {
+            display-name = "adjust2";
+            bindings = <
+                &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &kp DQT   &kp F7  &kp F8  &kp F9  &kp F10
+                &bt BT_CLR_ALL &bt BT_CLR    &trans        &trans        &trans                              &kp SQT   &kp F4  &kp F5  &kp F6  &kp F11
+                &trans         &trans        &trans        &trans        &trans        &kp LG(C)  &kp LG(Z)  &kp EXCL  &kp F1  &kp F2  &kp F3  &kp F12
+                                             &trans        &trans        &trans                              &trans    &trans
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
