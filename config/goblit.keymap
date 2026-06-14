@@ -65,7 +65,7 @@
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            bindings = <&kp BSPC>, <&kp DEL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
 			// keep-mods: if RSHIFT was the trigger, RSHIFT stays applied to the output → sends Shift+Delete (permanent delete in Windows Explorer)
 			// if LSHIFT was the trigger, it's dropped → sends plain Delete
@@ -76,7 +76,7 @@
         spc_bspc: space_backspace {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp BACKSPACE>;
+            bindings = <&kp SPACE>, <&kp BSPC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 		
@@ -164,10 +164,10 @@
         raise_layer {
             display-name = "raise";
             bindings = <
-                &trans     &trans     &trans    &trans    &trans                                     &to MOUSE2  &trans    &trans  &trans     &trans
-                &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &kp TAB                                    &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &gresc
-                &trans     &trans     &trans    &trans    &trans    &kp LC(UP_ARROW) &kp LS(LG(N4))  &trans      &trans    &trans  &trans     &trans
-                                      &trans    &trans    &trans                                     &trans      &trans
+                &trans     &trans     &trans    &trans    &trans                               &to MOUSE2  &trans    &trans  &trans     &trans
+                &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &kp TAB                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &gresc
+                &trans     &trans     &trans    &trans    &trans    &kp LC(UP) &kp LS(LG(N4))  &trans      &trans    &trans  &trans     &trans
+                                      &trans    &trans    &trans                               &trans      &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
@@ -194,10 +194,10 @@
         mouse_layer {
             display-name = "mouse";
             bindings = <
-                &trans &trans         &kp UP_ARROW   &trans          &trans               &trans &trans   &trans   &mo SCROLL &trans
-                &trans &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &trans               &trans &mkp MB3 &mkp MB1 &mkp MB2   &trans
-                &trans &trans         &trans         &trans          &trans &trans &trans &trans &trans   &pan     &orbit     &trans
-                                      &trans         &trans          &trans               &trans &trans
+                &trans &trans   &kp UP   &trans    &trans               &trans &trans   &trans   &mo SCROLL &trans
+                &trans &kp LEFT &kp DOWN &kp RIGHT &trans               &trans &mkp MB3 &mkp MB1 &mkp MB2   &trans
+                &trans &trans   &trans   &trans    &trans &trans &trans &trans &trans   &pan     &orbit     &trans
+                                &trans   &trans    &trans               &trans &trans
             >;
             sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
         };
