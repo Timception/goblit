@@ -2,7 +2,7 @@ layout: {zmk_keyboard: goblit}
 layers:
   base:
   - Q
-  - '&kpws W'
+  - 'SOCD W'
   - E
   - R
   - T
@@ -11,9 +11,9 @@ layers:
   - I
   - O
   - P
-  - '&kpad A'
-  - '&kpws S'
-  - '&kpad D'
+  - 'SOCD A'
+  - 'SOCD S'
+  - 'SOCD D'
   - F
   - G
   - H
