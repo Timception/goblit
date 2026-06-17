@@ -26,7 +26,7 @@ layers:
   - C
   - V
   - B
-  - Gui+V
+  - Command+V
   - {t: /, s: \}
   - N
   - M
@@ -64,8 +64,8 @@ layers:
   - '['
   - ']'
   - '>'
-  - Gui+C
-  - Gui+Z
+  - Command+C
+  - Command+Z
   - '0'
   - '1'
   - '2'
@@ -103,7 +103,7 @@ layers:
   - '`'
   - '!'
   - Ctl+UP
-  - Sft+Gui+4
+  - Sft+Command+4
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -330,7 +330,7 @@ layers:
   - C
   - V
   - B
-  - Gui+V
+  - Command+V
   - {t: /, s: \}
   - N
   - M
@@ -368,8 +368,8 @@ layers:
   - '['
   - ']'
   - '>'
-  - Gui+C
-  - Gui+Z
+  - Command+C
+  - Command+Z
   - '0'
   - '1'
   - '2'
@@ -407,7 +407,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctl+UP
-  - Sft+Gui+4
+  - Sft+Command+4
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
