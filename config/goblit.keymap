@@ -61,19 +61,12 @@
 
         /* Setup left and right */
 
-        kpad: key_lip_a_d {
+        SOCD: key_lip_a_d {
             compatible = "zmk,behavior-key-press-lip";
             #binding-cells = <1>;
             keycodes = <A D>;
         };
 
-        /* Setup up and down */
-
-        kpws: key_lip_w_s {
-            compatible = "zmk,behavior-key-press-lip";
-            #binding-cells = <1>;
-            keycodes = <W S>;
-        };
 
         /* mod-morph for backspace, shift (either side) + backspace = delete */
 
@@ -171,8 +164,8 @@
         default_layer {
             display-name = "base";
             bindings = <
-&kp Q    &kpws W    &kp E      &kp R      &kp T                             &kp Y         &kp U     &kp I      &kp O    &kp P
-&kpad A  &kpws S    &kpad D    &kp F      &kp G                             &kp H         &kp J     &kp K      &kp L    &kp SEMI
+&kp Q    &kp W      &kp E      &kp R      &kp T                             &kp Y         &kp U     &kp I      &kp O    &kp P
+&SOCD A  &kp S      &SOCD D    &kp F      &kp G                             &kp H         &kp J     &kp K      &kp L    &kp SEMI
 &kp Z    &kp X      &kp C      &kp V      &kp B      &kp LG(V)  &slh_morph  &kp N         &kp M     &kp COMMA  &kp DOT  &kp FSLH
                     &kp LSHFT  &kp ENTER  &mo LOWER                         &sft_mo2_del  &spc_bspc
             >;
@@ -300,8 +293,8 @@
         trackb_off_layer {
             display-name = "trackb_off";
             bindings = <
-&kp Q    &kpws W    &kp E      &kp R       &kp T                             &kp Y          &kp U     &kp I      &kp O    &kp P
-&kpad A  &kpws S    &kpad D    &kp F       &kp G                             &kp H          &kp J     &kp K      &kp L    &kp SEMI
+&kp Q    &kp W      &kp E      &kp R       &kp T                             &kp Y          &kp U     &kp I      &kp O    &kp P
+&SOCD A  &kp S      &SOCD D    &kp F       &kp G                             &kp H          &kp J     &kp K      &kp L    &kp SEMI
 &kp Z    &kp X      &kp C      &kp V       &kp B      &kp LG(V)  &slh_morph  &kp N          &kp M     &kp COMMA  &kp DOT  &kp FSLH
                     &kp LSHFT  &kp ENTER   &mo LOWER2                        &sft_mo10_del  &spc_bspc
             >;

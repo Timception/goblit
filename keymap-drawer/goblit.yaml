@@ -2,7 +2,7 @@ layout: {zmk_keyboard: goblit}
 layers:
   base:
   - Q
-  - 'SOCD W'
+  - W
   - E
   - R
   - T
@@ -12,7 +12,7 @@ layers:
   - O
   - P
   - 'SOCD A'
-  - 'SOCD S'
+  - S
   - 'SOCD D'
   - F
   - G
@@ -306,7 +306,7 @@ layers:
   - {t: ▽, type: trans}
   trackb_off:
   - Q
-  - '&kpws W'
+  - W
   - E
   - R
   - T
@@ -315,9 +315,9 @@ layers:
   - I
   - O
   - P
-  - '&kpad A'
-  - '&kpws S'
-  - '&kpad D'
+  - 'SOCD A'
+  - S
+  - 'SOCD D'
   - F
   - G
   - H
