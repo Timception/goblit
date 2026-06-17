@@ -89,8 +89,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: LSHFT, h: sticky}
   - {t: LCTRL, h: sticky}
-  - {t: LALT, h: sticky}
-  - {t: LGUI, h: sticky}
+  - {t: Option, h: sticky}
+  - {t: Command, h: sticky}
   - TAB
   - LEFT
   - DOWN
@@ -393,8 +393,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: LSHFT, h: sticky}
   - {t: LCTRL, h: sticky}
-  - {t: LALT, h: sticky}
-  - {t: LGUI, h: sticky}
+  - {t: Option, h: sticky}
+  - {t: Command, h: sticky}
   - TAB
   - LEFT
   - DOWN
