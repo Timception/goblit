@@ -197,7 +197,7 @@ parse_config:
     NON_US_HASH: '#'
     NUHS: '#'
     TILDE2: '~'
-    LG: 'Command'
+    GUI: 'Command'
     LGUI: 'Command'
     LALT: 'Option'
   zmk_combos: {}
