@@ -91,7 +91,7 @@ layers:
   - {t: LCTRL, h: sticky}
   - {t: Option, h: sticky}
   - {t: Command, h: sticky}
-  - {t: Sft+Command, h: sticky}
+  - {t: LSHIFT, h: sticky}
   - LEFT
   - DOWN
   - UP
@@ -395,7 +395,7 @@ layers:
   - {t: LCTRL, h: sticky}
   - {t: Option, h: sticky}
   - {t: Command, h: sticky}
-  - {t: Sft+Command, h: sticky}
+  - {t: LSHIFT, h: sticky}
   - LEFT
   - DOWN
   - UP
