@@ -87,11 +87,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: TAB, h: sticky}
+  - TAB
   - {t: LCTRL, h: sticky}
   - {t: Option, h: sticky}
   - {t: Command, h: sticky}
-  - LSHFT
+  - {t: LSHFT, h: sticky}
   - LEFT
   - DOWN
   - UP
@@ -391,11 +391,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: TAB, h: sticky}
+  - TAB
   - {t: LCTRL, h: sticky}
   - {t: Option, h: sticky}
   - {t: Command, h: sticky}
-  - LSHFT
+  - {t: LSHFT, h: sticky}
   - LEFT
   - DOWN
   - UP
