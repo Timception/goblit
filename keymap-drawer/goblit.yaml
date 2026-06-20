@@ -97,11 +97,11 @@ layers:
   - UP
   - RIGHT
   - {t: ESC, s: '`'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - '`'
+  - {t: ▽, type: trans}
   - '!'
+  - '"'
+  - ''''
   - Ctl+UP
   - Sft+Command+4
   - {t: ▽, type: trans}
@@ -262,7 +262,7 @@ layers:
   - '&orbit'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - SPACE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
