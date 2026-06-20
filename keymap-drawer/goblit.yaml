@@ -77,8 +77,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   raise:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ESC
+  - {t: ESC, s: '`'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -87,18 +87,18 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: LSHFT, h: sticky}
+  - {t: TAB, h: sticky}
   - {t: LCTRL, h: sticky}
   - {t: Option, h: sticky}
   - {t: Command, h: sticky}
-  - TAB
+  - LSHFT
   - LEFT
   - DOWN
   - UP
   - RIGHT
-  - {t: ESC, s: '`'}
-  - '`'
   - {t: ▽, type: trans}
+  - CAPS
+  - '`'
   - '!'
   - '"'
   - ''''
@@ -120,7 +120,7 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - '"'
+  - {t: ▽, type: trans}
   - F7
   - F8
   - F9
@@ -130,7 +130,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''''
+  - {t: ▽, type: trans}
   - F4
   - F5
   - F6
@@ -142,7 +142,7 @@ layers:
   - {t: ▽, type: trans}
   - VOL DN
   - VOL UP
-  - '!'
+  - ESC
   - F1
   - F2
   - F3
@@ -153,31 +153,31 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   mouse:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - UP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Q
+  - W
+  - E
+  - R
+  - T
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - scroll
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LEFT
-  - DOWN
-  - RIGHT
-  - {t: ▽, type: trans}
+  - '&SOCD A'
+  - S
+  - '&SOCD D'
+  - F
+  - G
   - {t: ▽, type: trans}
   - '&mkp MB3'
   - '&mkp MB1'
   - '&mkp MB2'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Z
+  - X
+  - C
+  - V
+  - B
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -381,31 +381,31 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   raise2:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: mouse2, h: toggle}
-  - {t: base, h: toggle}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: LSHFT, h: sticky}
-  - {t: LCTRL, h: sticky}
-  - {t: Option, h: sticky}
-  - {t: Command, h: sticky}
-  - TAB
-  - LEFT
-  - DOWN
-  - UP
-  - RIGHT
+  - ESC
   - {t: ESC, s: '`'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: mouse2, h: toggle}
+  - {t: trackb_off, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: TAB, h: sticky}
+  - {t: LCTRL, h: sticky}
+  - {t: Option, h: sticky}
+  - {t: Command, h: sticky}
+  - LSHFT
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - {t: ▽, type: trans}
+  - CAPS
+  - '`'
+  - '!'
+  - '"'
+  - ''''
   - Ctl+UP
   - Sft+Command+4
   - {t: ▽, type: trans}
@@ -424,7 +424,7 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - '"'
+  - {t: ▽, type: trans}
   - F7
   - F8
   - F9
@@ -434,7 +434,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''''
+  - {t: ▽, type: trans}
   - F4
   - F5
   - F6
@@ -446,7 +446,7 @@ layers:
   - {t: ▽, type: trans}
   - VOL DN
   - VOL UP
-  - '!'
+  - ESC
   - F1
   - F2
   - F3
