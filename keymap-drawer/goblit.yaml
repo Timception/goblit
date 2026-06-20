@@ -35,9 +35,9 @@ layers:
   - /
   - LSHFT
   - ENTER
-  - lower
-  - {t: raise, s: DEL}
-  - {t: SPACE, s: BSPC}
+  - {t: lower, s: DEL}
+  - {t: raise, s: BSPC}
+  - SPACE
   lower:
   - '~'
   - '@'
@@ -339,9 +339,9 @@ layers:
   - /
   - LSHFT
   - ENTER
-  - lower2
-  - {t: raise2, s: DEL}
-  - {t: SPACE, s: BSPC}
+  - {t: lower2, s: DEL}
+  - {t: raise2, s: BSPC}
+  - SPACE
   lower2:
   - '~'
   - '@'
