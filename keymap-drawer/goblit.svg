@@ -319,19 +319,19 @@ rect.held, rect.combo.held { fill: #368bd6; }</style>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <a href="#lower">
 <text x="0" y="-4" class="key tap layer-activator">lower</text>
-</a></g>
+</a><text x="0" y="-24" class="key shifted">DEL</text>
+</g>
 <g transform="translate(445, 274) rotate(-45.0)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <a href="#raise">
 <text x="0" y="-4" class="key tap layer-activator">raise</text>
-</a><text x="0" y="-24" class="key shifted">DEL</text>
+</a><text x="0" y="-24" class="key shifted">BSPC</text>
 </g>
 <g transform="translate(515, 225) rotate(-23.0)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">SPACE</text>
-<text x="0" y="-24" class="key shifted">BSPC</text>
 </g>
 </g>
 </g>
@@ -1891,19 +1891,19 @@ rect.held, rect.combo.held { fill: #368bd6; }</style>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <a href="#lower2">
 <text x="0" y="-4" class="key tap layer-activator">lower2</text>
-</a></g>
+</a><text x="0" y="-24" class="key shifted">DEL</text>
+</g>
 <g transform="translate(445, 274) rotate(-45.0)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <a href="#raise2">
 <text x="0" y="-4" class="key tap layer-activator">raise2</text>
-</a><text x="0" y="-24" class="key shifted">DEL</text>
+</a><text x="0" y="-24" class="key shifted">BSPC</text>
 </g>
 <g transform="translate(515, 225) rotate(-23.0)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">SPACE</text>
-<text x="0" y="-24" class="key shifted">BSPC</text>
 </g>
 </g>
 </g>
