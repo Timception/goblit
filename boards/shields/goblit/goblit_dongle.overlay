@@ -53,10 +53,17 @@
 
 &trackball_split_listener { // local trackball input split device child node, receiving events from the peripheral and raising them locally
 	status = "okay";
-    	input-processors = 
-		    //<&pointer_accel>;
+    	input-processors =
 			<&pointer_accel>,
 			<&am_temp_layer 4 659>;   /* <- guarded automouse: layer 4 for 0.659s */
+	
+	// Suppress automouse entirely while a momentary layer is held
+    // (LOWER=1, RAISE=2, ADJUST=3, LOWER2=9, RAISE2=10, ADJUST2=11)
+    layer_guard {
+        layers = <1 2 3 9 10 11>;
+        input-processors = <&pointer_accel>;
+    };
+	
 	scroll {
 		layers = <5 7>; // SCROLL
 		input-processors =
@@ -64,6 +71,7 @@
             <&zip_xy_scaler 1 16>,
             <&zip_xy_to_scroll_mapper>;
 	};
+	
     off {
     layers = <8>;
     input-processors =
