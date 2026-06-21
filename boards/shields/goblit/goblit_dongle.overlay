@@ -74,8 +74,7 @@
 	
     off {
     layers = <8>;
-    input-processors =
-        <&zip_xy_scaler 1 1000000>;
+    input-processors = <&pointer_accel>;
     };
 };
 
