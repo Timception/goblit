@@ -7,3 +7,8 @@ More details coming very soon!
 - [ZMK Studio](https://zmk.studio/) enabled, and can also be keymapped using [Nick Coutsos' Editor](https://github.com/nickcoutsos/keymap-editor)  
 - [Nick Coutsos Online Editor](https://nickcoutsos.github.io/keymap-editor/)  
 - Connects through a **dongle** for improved wireless functionality  
+
+
+# Keymap
+
+![Keymap](https://github.com/Timception/goblit/blob/main/keymap-drawer/goblit.svg)  

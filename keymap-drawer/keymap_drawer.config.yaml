@@ -28,7 +28,7 @@ draw_config:
     rel_h: 12.0
     rx: 4.0
     ry: 4.0
-  svg_extra_style: 'rect.held, rect.combo.held { fill: #368bd6; }'
+  svg_extra_style: 'rect.held, rect.combo.held { fill: #368bd6;'
   footer_text: Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>
   shrink_wide_legends: 7
   style_layer_activators: true
@@ -55,7 +55,7 @@ parse_config:
     right_shift: Sft
     left_alt: Alt
     right_alt: AltGr
-    left_gui: Command
+    left_gui: Gui
     right_gui: Gui
     keycode_combiner: '{mods}+{key}'
     mod_combiner: '{mod_1}+{mod_2}'
@@ -197,8 +197,6 @@ parse_config:
     NON_US_HASH: '#'
     NUHS: '#'
     TILDE2: '~'
-    LGUI: 'Command'
-    LALT: 'Option'
   zmk_combos: {}
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []

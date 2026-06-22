@@ -26,7 +26,7 @@ layers:
   - C
   - V
   - B
-  - Command+V
+  - Gui+V
   - {t: /, s: \}
   - N
   - M
@@ -64,8 +64,8 @@ layers:
   - '['
   - ']'
   - '>'
-  - Command+C
-  - Command+Z
+  - Gui+C
+  - Gui+Z
   - '0'
   - '1'
   - '2'
@@ -89,8 +89,8 @@ layers:
   - {t: ▽, type: trans}
   - TAB
   - {t: LCTRL, h: sticky}
-  - {t: Option, h: sticky}
-  - {t: Command, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: LGUI, h: sticky}
   - {t: LSHIFT, h: sticky}
   - LEFT
   - DOWN
@@ -103,7 +103,7 @@ layers:
   - '"'
   - ''''
   - Ctl+UP
-  - Sft+Command+4
+  - Sft+Gui+4
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -330,7 +330,7 @@ layers:
   - C
   - V
   - B
-  - Command+V
+  - Gui+V
   - {t: /, s: \}
   - N
   - M
@@ -368,8 +368,8 @@ layers:
   - '['
   - ']'
   - '>'
-  - Command+C
-  - Command+Z
+  - Gui+C
+  - Gui+Z
   - '0'
   - '1'
   - '2'
@@ -393,8 +393,8 @@ layers:
   - {t: ▽, type: trans}
   - TAB
   - {t: LCTRL, h: sticky}
-  - {t: Option, h: sticky}
-  - {t: Command, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: LGUI, h: sticky}
   - {t: LSHIFT, h: sticky}
   - LEFT
   - DOWN
@@ -407,7 +407,7 @@ layers:
   - '"'
   - ''''
   - Ctl+UP
-  - Sft+Command+4
+  - Sft+Gui+4
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
