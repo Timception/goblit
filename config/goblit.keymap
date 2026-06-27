@@ -190,9 +190,9 @@
         raise_layer {
             display-name = "raise";
             bindings = <
-&kp ESC   &gresc     &trans    &trans    &trans                                  &to MOUSE2  &to TRACKB_OFF  &trans  &trans     &trans
-&kp TAB   &sk LCTRL  &sk LALT  &sk LGUI  &sk LSHIFT                              &kp LEFT    &kp DOWN        &kp UP  &kp RIGHT  &trans
-&kp CAPS  &kp GRAVE  &kp EXCL  &kp DQT   &kp SQT     &kp LC(UP)  &kp LS(LG(N4))  &trans      &trans          &trans  &trans     &trans
+&kp ESC   &gresc     &trans    &trans    &trans                                  &to MOUSE2  &to TRACKB_OFF  &trans    &trans     &trans
+&kp TAB   &sk LCTRL  &sk LALT  &sk LGUI  &sk LSHIFT                              &kp LEFT    &kp DOWN        &kp UP    &kp RIGHT  &trans
+&kp CAPS  &kp GRAVE  &kp EXCL  &kp DQT   &kp SQT     &kp LC(UP)  &kp LS(LG(N4))  &trans      &kp LEFT        &kp DOWN  &kp RIGHT  &trans
 
           &trans     &trans    &trans                            &trans          &trans
             >;
