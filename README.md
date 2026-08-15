@@ -14,6 +14,11 @@ Goblit by Timception
 - This could be seen as a miniature version of [Drift Keyboard V4](https://github.com/Timception/drift-v4-trackball-dongle)  
 
 
+# Important Notes on using this keyboard
+
+- My particular solution to using such a small keyboard has led to heavy use of [Mod-Morph Behaviour](https://zmk.dev/docs/keymaps/behaviors/mod-morph) which basically adds custom shortcut combos in addition to predefined layers in the [Keymap File](https://github.com/Timception/goblit/blob/main/config/goblit.keymap). You will likely need to have prior experience with split keyboards and basic coding knowledge to properly fiddle with this. My predefined mod-morphs are essentially mods involving the SHIFT key.  
+
+
 # Keymap
 
 ![Keymap](https://github.com/Timception/goblit/blob/main/keymap-drawer/goblit.svg)  
