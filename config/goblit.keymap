@@ -59,7 +59,7 @@
             tap-ms = <20>;
         };
 
-        /* Setup left and right */
+        /* Setup SOCD for keys A and D (left and right) */
 
         SOCD: key_lip_a_d {
             compatible = "zmk,behavior-key-press-lip";
