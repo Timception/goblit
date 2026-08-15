@@ -17,6 +17,7 @@ Goblit by Timception
 # Important Notes on using this keyboard
 
 - My particular solution to using such a small keyboard has led to heavy use of [Mod-Morph Behaviour](https://zmk.dev/docs/keymaps/behaviors/mod-morph) which basically adds custom shortcut combos in addition to predefined layers in the [Keymap File](https://github.com/Timception/goblit/blob/main/config/goblit.keymap). You will likely need to have prior experience with split keyboards and basic coding knowledge to properly fiddle with this. My predefined mod-morphs are essentially mods involving the SHIFT key.  
+- TLDR; This keyboard is not for beginners.
 
 
 # Keymap
