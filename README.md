@@ -1,8 +1,6 @@
 Goblit by Timception  
 ---  
-![Goblit by Timception](https://github.com/Timception/goblit/blob/main/img/Goblit-Pixels.png)  
-
-![Goblit by Timception](https://github.com/Timception/goblit/blob/main/img/Goblit.jpg)  
+![Goblit by Timception](https://github.com/Timception/goblit/blob/main/img/Goblit-Pixel-Graphic.jpeg)  
 
 ## 🆕 Key Features
 
